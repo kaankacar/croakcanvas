@@ -1,38 +1,105 @@
-.App {
+body {
+  background-image: url('./pic.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.pixel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-title {
+  font-size: 32px;
   text-align: center;
+  margin-bottom: 20px;
+  color: #FF00FF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.connect-wallet {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #FF00FF;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.description {
+  background-color: rgba(224, 224, 224, 0.9);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-style: italic;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pixel-info {
+  background-color: rgba(224, 224, 224, 0.9);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-color-picker {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.canvas-container {
+  border: 5px solid #FF00FF;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.pixel-canvas {
+  display: block;
+  width: 100%;
+  image-rendering: pixelated;
+  cursor: crosshair;
+}
+
+@media (max-width: 600px) {
+  .pixel-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .pixel-title {
+    font-size: 24px;
+  }
+  
+  .pixel-info {
+    font-size: 12px;
+  }
+  
+  .connect-wallet {
+    position: static;
+    display: block;
+    margin: 10px auto;
   }
 }
